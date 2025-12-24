@@ -1,694 +1,362 @@
 <!doctype html>
 <html lang="ta">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>தமிழ் செய்திகள் - உண்மையான செய்திகள், நம்பகமான தகவல்கள் | Tamil News</title>
-    <meta name="description" content="தமிழகத்தின் முன்னணி செய்தி தளம். அரசியல், விளையாட்டு, பொழுதுபோக்கு, தொழில்நுட்பம், வணிகம் ஆகிய துறைகளின் சமீபத்திய செய்திகள்." />
-    <meta name="author" content="Tamil News" />
-    <meta name="keywords" content="தமிழ் செய்திகள், Tamil news, Chennai news, Tamil Nadu news, அரசியல், விளையாட்டு, கோலிவுட்" />
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://tamilnews.com" />
-
-    <meta property="og:title" content="தமிழ் செய்திகள் - உண்மையான செய்திகள், நம்பகமான தகவல்கள்" />
-    <meta property="og:description" content="தமிழகத்தின் முன்னணி செய்தி தளம். சமீபத்திய செய்திகள், பிரேக்கிங் நியூஸ்." />
-    <meta property="og:type" content="website" />
-    <meta property="og:locale" content="ta_IN" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@TamilNews" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-    
-    <!-- Google AdSense Script -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amze Times - வேகமாகவும் நம்பகமாகவும் | Tamil News</title>
+    <meta name="description" content="Amze Times - இந்தியா மற்றும் உலகின் சமீபத்திய செய்திகள், பிரேக்கிங் நியூஸ், அரசியல், விளையாட்டு, பொழுதுபோக்கு, தொழில்நுட்பச் செய்திகள்.">
+    <meta name="author" content="Amze Times">
+    <link rel="canonical" href="https://amzetimes.in">
+    <link rel="icon" href="logo.png" type="image/png">
+    <!-- Google AdSense Script (Replace PUB-ID with your own)[citation:3] -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6592137877448044" crossorigin="anonymous"></script>
-    
     <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: 'Arial Unicode MS', 'Nirmala UI', Arial, sans-serif;
-      }
-      body {
-        background-color: #f5f5f5;
-        color: #333;
-        line-height: 1.6;
-      }
-      .container {
-        width: 100%;
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 15px;
-      }
-      header {
-        background-color: #2e3a59;
-        color: white;
-        padding: 1rem 0;
-        border-bottom: 4px solid #e63946;
-      }
-      .header-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-      }
-      .logo {
-        font-size: 1.8rem;
-        font-weight: bold;
-        color: white;
-        text-decoration: none;
-      }
-      .logo span {
-        color: #e63946;
-      }
-      .date-display {
-        font-size: 0.9rem;
-        opacity: 0.9;
-        margin-top: 5px;
-      }
-      nav ul {
-        display: flex;
-        list-style: none;
-        flex-wrap: wrap;
-      }
-      nav ul li a {
-        color: white;
-        text-decoration: none;
-        padding: 0.5rem 1rem;
-        display: block;
-        border-radius: 4px;
-        transition: background-color 0.3s;
-      }
-      nav ul li a:hover,
-      nav ul li a.active {
-        background-color: #e63946;
-      }
-      main {
-        padding: 2rem 0;
-      }
-      .page-title {
-        font-size: 2.2rem;
-        margin-bottom: 1.5rem;
-        color: #2e3a59;
-        padding-bottom: 0.5rem;
-        border-bottom: 2px solid #e63946;
-      }
-      .breaking-news-alert {
-        background-color: #fff3cd;
-        border: 1px solid #ffeaa7;
-        color: #856404;
-        padding: 1rem;
-        border-radius: 5px;
-        margin-bottom: 2rem;
-        display: flex;
-        align-items: center;
-      }
-      .breaking-news-alert strong {
-        margin-right: 10px;
-        background: #e63946;
-        color: white;
-        padding: 2px 10px;
-        border-radius: 3px;
-      }
-      .news-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-        gap: 2rem;
-        margin-bottom: 3rem;
-      }
-      .news-card {
-        background: white;
-        border-radius: 8px;
-        overflow: hidden;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-        transition: transform 0.3s, box-shadow 0.3s;
-      }
-      .news-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-      }
-      .news-image {
-        width: 100%;
-        height: 200px;
-        background-color: #ddd;
-        background: linear-gradient(45deg, #a8dadc, #457b9d);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        font-size: 3rem;
-      }
-      .news-content {
-        padding: 1.5rem;
-      }
-      .news-category {
-        display: inline-block;
-        background: #e63946;
-        color: white;
-        padding: 0.25rem 0.75rem;
-        border-radius: 20px;
-        font-size: 0.8rem;
-        margin-bottom: 0.75rem;
-      }
-      .news-title {
-        font-size: 1.3rem;
-        margin-bottom: 0.75rem;
-        color: #2e3a59;
-      }
-      .news-title a {
-        color: inherit;
-        text-decoration: none;
-      }
-      .news-title a:hover {
-        color: #e63946;
-        text-decoration: underline;
-      }
-      .news-summary {
-        color: #555;
-        margin-bottom: 1rem;
-        font-size: 0.95rem;
-      }
-      .news-meta {
-        display: flex;
-        justify-content: space-between;
-        color: #777;
-        font-size: 0.85rem;
-        border-top: 1px solid #eee;
-        padding-top: 1rem;
-      }
-      .trending-section {
-        background: white;
-        border-radius: 8px;
-        padding: 2rem;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-        margin-bottom: 3rem;
-      }
-      .section-heading {
-        font-size: 1.5rem;
-        color: #2e3a59;
-        margin-bottom: 1.5rem;
-        padding-bottom: 0.5rem;
-        border-bottom: 1px solid #eee;
-      }
-      .trending-list {
-        list-style: none;
-      }
-      .trending-list li {
-        padding: 1rem 0;
-        border-bottom: 1px solid #f5f5f5;
-        display: flex;
-        align-items: center;
-      }
-      .trending-list li:last-child {
-        border-bottom: none;
-      }
-      .trending-number {
-        background: #2e3a59;
-        color: white;
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-right: 1rem;
-        font-size: 0.9rem;
-      }
-      .trending-text a {
-        color: #333;
-        text-decoration: none;
-        font-weight: 500;
-      }
-      .trending-text a:hover {
-        color: #e63946;
-      }
-      
-      /* Ad Container Styles */
-      .ad-container {
-        margin: 2rem 0;
-        text-align: center;
-        min-height: 250px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: #f8f9fa;
-        border: 1px dashed #dee2e6;
-        border-radius: 5px;
-        color: #6c757d;
-      }
-      .ad-container.horizontal {
-        width: 100%;
-        max-width: 970px;
-        height: 90px;
-      }
-      .ad-container.rectangle {
-        width: 300px;
-        height: 250px;
-      }
-      .ad-container.banner {
-        width: 100%;
-        height: 100px;
-      }
-      .ad-label {
-        font-size: 0.8rem;
-        color: #999;
-        text-align: center;
-        margin-bottom: 5px;
-        text-transform: uppercase;
-      }
-      
-      footer {
-        background-color: #2e3a59;
-        color: white;
-        padding: 3rem 0 2rem;
-        margin-top: 2rem;
-      }
-      .footer-content {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 2rem;
-        margin-bottom: 2rem;
-      }
-      .footer-section h3 {
-        font-size: 1.2rem;
-        margin-bottom: 1rem;
-        color: #a8dadc;
-      }
-      .footer-section ul {
-        list-style: none;
-      }
-      .footer-section ul li {
-        margin-bottom: 0.5rem;
-      }
-      .footer-section ul li a {
-        color: #ddd;
-        text-decoration: none;
-      }
-      .footer-section ul li a:hover {
-        color: white;
-        text-decoration: underline;
-      }
-      .copyright {
-        text-align: center;
-        padding-top: 2rem;
-        border-top: 1px solid #40537a;
-        color: #a8dadc;
-        font-size: 0.9rem;
-      }
-      .search-box {
-        display: flex;
-        margin: 1rem 0 2rem;
-      }
-      .search-box input {
-        flex: 1;
-        padding: 0.75rem;
-        border: 2px solid #ddd;
-        border-right: none;
-        border-radius: 5px 0 0 5px;
-        font-size: 1rem;
-      }
-      .search-box button {
-        background: #e63946;
-        color: white;
-        border: none;
-        padding: 0 1.5rem;
-        border-radius: 0 5px 5px 0;
-        cursor: pointer;
-        font-size: 1rem;
-      }
-      @media (max-width: 768px) {
-        .header-container {
-          flex-direction: column;
-          text-align: center;
+        :root {
+            --primary: #d9222a;
+            --primary-dark: #a51c22;
+            --secondary: #2c2c2c;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --gray: #6c757d;
+            --transition: all 0.3s ease;
         }
-        nav ul {
-          justify-content: center;
-          margin-top: 1rem;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Helvetica Neue', Arial, 'Nirmala UI', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: #fff;
         }
-        .news-grid {
-          grid-template-columns: 1fr;
-        }
-        .page-title {
-          font-size: 1.8rem;
-        }
-        .ad-container.rectangle {
-          width: 100%;
-          max-width: 300px;
-          margin: 0 auto;
-        }
-      }
-    </style>
-  </head>
+        .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 15px; }
 
-  <body>
-    <header>
-      <div class="container header-container">
-        <div>
-          <a href="#" class="logo">தமிழ் <span>செய்திகள்</span></a>
-          <div class="date-display">திங்கள், டிசம்பர் 25, 2025</div>
+        /* Header & Navigation */
+        .main-header { background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.05); border-top: 4px solid var(--primary); position: sticky; top: 0; z-index: 1000; }
+        .header-top { border-bottom: 1px solid #eee; padding: 10px 0; }
+        .current-date-time { font-size: 0.9rem; color: var(--gray); text-align: center; }
+        .header-main { padding: 15px 0; }
+        .branding { display: flex; align-items: center; justify-content: center; margin-bottom: 15px; }
+        .site-logo { height: 60px; width: auto; margin-right: 15px; }
+        .site-title { font-size: 2.8rem; font-weight: 900; color: var(--primary); letter-spacing: -1px; }
+        .site-tagline { font-size: 0.95rem; color: var(--gray); text-align: center; margin-bottom: 15px; }
+        .main-nav { background: var(--secondary); }
+        .nav-list { display: flex; list-style: none; justify-content: center; flex-wrap: wrap; }
+        .nav-item { position: relative; }
+        .nav-link { color: white; text-decoration: none; padding: 15px 20px; display: block; font-weight: 500; transition: var(--transition); border-bottom: 3px solid transparent; }
+        .nav-link:hover, .nav-link.active { background: rgba(255,255,255,0.05); border-bottom-color: var(--primary); }
+        .mobile-menu-btn { display: none; background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; padding: 10px; }
+
+        /* Advertisement Placeholders */
+        .ad-label { font-size: 0.75rem; color: var(--gray); text-transform: uppercase; letter-spacing: 0.5px; text-align: center; margin-bottom: 5px; }
+        .ad-container { background-color: #f8f9fa; border: 1px dashed #dee2e6; color: #adb5bd; display: flex; align-items: center; justify-content: center; text-align: center; overflow: hidden; }
+        .ad-leaderboard { width: 100%; height: 90px; margin: 20px auto; }
+        .ad-rectangle { width: 300px; height: 250px; margin: 20px auto; }
+        .ad-banner { width: 100%; height: 100px; margin: 20px auto; }
+
+        /* Main Content & Hero */
+        .page-title { font-size: 2rem; color: var(--secondary); margin: 25px 0; padding-bottom: 10px; border-bottom: 2px solid var(--primary); }
+        .hero-breaking-news { background: #fff8e1; border-left: 4px solid #ffc107; padding: 15px; margin: 20px 0; border-radius: 0 4px 4px 0; }
+        .breaking-label { background: var(--primary); color: white; padding: 3px 10px; border-radius: 3px; font-size: 0.8rem; font-weight: bold; margin-right: 10px; }
+        .news-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 25px; margin: 30px 0; }
+        .news-card { background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: transform 0.3s ease, box-shadow 0.3s ease; height: 100%; display: flex; flex-direction: column; }
+        .news-card:hover { transform: translateY(-5px); box-shadow: 0 12px 20px rgba(0,0,0,0.1); }
+        .news-img-container { height: 200px; width: 100%; overflow: hidden; background-color: #e9ecef; }
+        .news-img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+        .news-card:hover .news-img { transform: scale(1.03); }
+        .news-body { padding: 20px; flex-grow: 1; display: flex; flex-direction: column; }
+        .news-category { display: inline-block; background: var(--primary); color: white; padding: 4px 12px; border-radius: 30px; font-size: 0.75rem; font-weight: bold; margin-bottom: 12px; align-self: flex-start; }
+        .news-title { font-size: 1.25rem; margin-bottom: 10px; line-height: 1.4; }
+        .news-title a { color: var(--secondary); text-decoration: none; }
+        .news-title a:hover { color: var(--primary); }
+        .news-summary { color: var(--gray); font-size: 0.95rem; margin-bottom: 15px; flex-grow: 1; }
+        .news-meta { display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--gray); padding-top: 15px; border-top: 1px solid #eee; }
+
+        /* Sidebar & Trending */
+        .sidebar-widget { background: white; padding: 25px; margin-bottom: 30px; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        .widget-title { font-size: 1.4rem; color: var(--secondary); margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #eee; }
+        .trending-list { list-style: none; }
+        .trending-item { padding: 12px 0; border-bottom: 1px solid #f1f1f1; display: flex; align-items: flex-start; }
+        .trending-number { background: var(--primary); color: white; min-width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.9rem; font-weight: bold; margin-right: 12px; margin-top: 2px; }
+        .trending-text a { color: var(--dark); text-decoration: none; font-weight: 500; line-height: 1.4; }
+        .trending-text a:hover { color: var(--primary); }
+
+        /* Footer */
+        .main-footer { background: var(--secondary); color: #ddd; padding: 50px 0 20px; margin-top: 50px; }
+        .footer-widgets { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-bottom: 40px; }
+        .footer-logo { height: 50px; margin-bottom: 15px; }
+        .footer-title { color: white; font-size: 1.2rem; margin-bottom: 20px; }
+        .footer-links { list-style: none; }
+        .footer-links li { margin-bottom: 10px; }
+        .footer-links a { color: #aaa; text-decoration: none; }
+        .footer-links a:hover { color: white; }
+        .copyright { text-align: center; padding-top: 20px; border-top: 1px solid #444; color: #aaa; font-size: 0.9rem; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .site-title { font-size: 2rem; }
+            .site-logo { height: 50px; }
+            .mobile-menu-btn { display: block; position: absolute; top: 20px; right: 15px; }
+            .nav-list { display: none; flex-direction: column; width: 100%; }
+            .nav-list.active { display: flex; }
+            .nav-item { width: 100%; }
+            .nav-link { padding: 12px 15px; border-bottom: 1px solid #444; }
+            .news-grid { grid-template-columns: 1fr; }
+            .ad-rectangle { width: 100%; max-width: 300px; }
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-top">
+            <div class="container">
+                <div class="current-date-time" id="currentDateTime">திங்கள், டிசம்பர் 25, 2025 | மதியம் 12:41</div>
+            </div>
         </div>
-        <nav>
-          <ul>
-            <li><a href="#" class="active">முகப்பு</a></li>
-            <li><a href="#latest-news">சமீபத்திய செய்திகள்</a></li>
-            <li><a href="#politics">அரசியல்</a></li>
-            <li><a href="#sports">விளையாட்டு</a></li>
-            <li><a href="#entertainment">பொழுதுபோக்கு</a></li>
-            <li><a href="#business">வணிகம்</a></li>
-          </ul>
+        <div class="header-main">
+            <div class="container">
+                <div class="branding">
+                    <!-- Your Logo -->
+                    <img src="logo.png" alt="Amze Times Logo" class="site-logo">
+                    <h1 class="site-title">AMZE TIMES</h1>
+                </div>
+                <p class="site-tagline">வேகமாகவும் நம்பகமாகவும் - முன்னணித் தமிழ் செய்தித்தளம்</p>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <div class="container">
+                <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+                <ul class="nav-list" id="mainNav">
+                    <li class="nav-item"><a href="#home" class="nav-link active">முகப்பு</a></li>
+                    <li class="nav-item"><a href="#india" class="nav-link">இந்தியா</a></li>
+                    <li class="nav-item"><a href="#world" class="nav-link">உலகம்</a></li>
+                    <li class="nav-item"><a href="#politics" class="nav-link">அரசியல்</a></li>
+                    <li class="nav-item"><a href="#sports" class="nav-link">விளையாட்டு</a></li>
+                    <li class="nav-item"><a href="#entertainment" class="nav-link">பொழுதுபோக்கு</a></li>
+                    <li class="nav-item"><a href="#business" class="nav-link">வணிகம்</a></li>
+                    <li class="nav-item"><a href="#technology" class="nav-link">தொழில்நுட்பம்</a></li>
+                </ul>
+            </div>
         </nav>
-      </div>
     </header>
 
-    <main class="container">
-      <h1 class="page-title">இன்றைய முக்கிய செய்திகள்</h1>
-      
-      <!-- Top Banner Ad -->
-      <div class="ad-label">விளம்பரம்</div>
-      <div class="ad-container banner">
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <!-- Tamil News Top Banner -->
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-client="ca-pub-6592137877448044"
-             data-ad-slot="1234567890"
-             data-ad-format="auto"
-             data-full-width-responsive="true"></ins>
-        <script>
-             (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-      </div>
-      
-      <div class="breaking-news-alert">
-        <strong>பிரேக்கிங் நியூஸ்</strong>
-        <span>தமிழக அரசின் புதிய கல்விக் கொள்கை குறித்த அறிவிப்பு இன்று மதியம் 12 மணிக்கு எதிர்பார்க்கப்படுகிறது.</span>
-      </div>
-
-      <div class="search-box">
-        <input type="text" placeholder="செய்திகளை தேடுங்கள்..." />
-        <button type="button">தேடு</button>
-      </div>
-
-      <section id="latest-news">
-        <h2 class="section-heading">சமீபத்திய செய்திகள்</h2>
-        
-        <!-- Ad between news sections -->
+    <div class="container">
+        <!-- Top Ad (Leaderboard) -->
         <div class="ad-label">விளம்பரம்</div>
-        <div class="ad-container horizontal">
-          <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-          <!-- Tamil News Horizontal -->
-          <ins class="adsbygoogle"
-               style="display:inline-block;width:100%;height:90px"
-               data-ad-client="ca-pub-6592137877448044"
-               data-ad-slot="0987654321"></ins>
-          <script>
-               (adsbygoogle = window.adsbygoogle || []).push({});
-          </script>
+        <div class="ad-container ad-leaderboard" id="ad-top">
+            <!-- Google AdSense Leaderboard Ad will be loaded here -->
         </div>
-        
+
+        <h1 class="page-title">இன்றைய முக்கிய செய்திகள்</h1>
+
+        <!-- Breaking News Alert -->
+        <div class="hero-breaking-news">
+            <span class="breaking-label">பிரேக்கிங்</span>
+            <strong>வங்கதேச தேர்தல் சதி குற்றச்சாட்டு:</strong> முன்னாள் பிரதமர் முகமது யூனுஸ் மீது "தேர்தலில் சதி" செய்த குற்றச்சாட்டு தொடர்பாக வங்கதேச அதிகாரிகள் விசாரணை நடத்துகின்றனர்[citation:8].
+        </div>
+
+        <!-- Main News Grid -->
         <div class="news-grid">
-          <article class="news-card">
-            <div class="news-image">📰</div>
-            <div class="news-content">
-              <span class="news-category">அரசியல்</span>
-              <h3 class="news-title"><a href="#">முதலமைச்சர் புதிய திட்டங்களை அறிவித்தார்</a></h3>
-              <p class="news-summary">மாநில வளர்ச்சிக்காக ரூ. 500 கோடி மதிப்பிலான பல்துறை திட்டங்களை முதலமைச்சர் இன்று அறிவித்தார்.</p>
-              <div class="news-meta">
-                <span>டிசம்பர் 25, 2025</span>
-                <span>2 நிமிடம் வாசிப்பு</span>
-              </div>
-            </div>
-          </article>
-          
-          <article class="news-card">
-            <div class="news-image">⚽</div>
-            <div class="news-content">
-              <span class="news-category">விளையாட்டு</span>
-              <h3 class="news-title"><a href="#">ஐபிஎல் 2026: சென்னை சூப்பர் கிங்ஸ் அணி அறிவிப்பு</a></h3>
-              <p class="news-summary">இந்தியன் பிரீமியர் லீக் 2026க்கான சென்னை சூப்பர் கிங்ஸ் அணியின் புதிய உறுப்பினர்கள் பட்டியல் வெளியிடப்பட்டது.</p>
-              <div class="news-meta">
-                <span>டிசம்பர் 24, 2025</span>
-                <span>3 நிமிடம் வாசிப்பு</span>
-              </div>
-            </div>
-          </article>
-          
-          <article class="news-card">
-            <div class="news-image">🎬</div>
-            <div class="news-content">
-              <span class="news-category">பொழுதுபோக்கு</span>
-              <h3 class="news-title"><a href="#">புகழ்பெற்ற இயக்குநர் புதிய திரைப்படத்தை தொடங்கினார்</a></h3>
-              <p class="news-summary">தமிழ்த் திரையுலகின் புகழ்பெற்ற இயக்குநர் தனது அடுத்த படப்பிடிப்பை சென்னையில் தொடங்கியுள்ளார்.</p>
-              <div class="news-meta">
-                <span>டிசம்பர் 23, 2025</span>
-                <span>4 நிமிடம் வாசிப்பு</span>
-              </div>
-            </div>
-          </article>
-          
-          <!-- In-article Ad -->
-          <div class="ad-container rectangle" style="grid-column: span 1; align-self: center;">
-            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-            <!-- Tamil News Rectangle -->
-            <ins class="adsbygoogle"
-                 style="display:block"
-                 data-ad-client="ca-pub-6592137877448044"
-                 data-ad-slot="1122334455"
-                 data-ad-format="rectangle"></ins>
-            <script>
-                 (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
-          </div>
-          
-          <article class="news-card">
-            <div class="news-image">💼</div>
-            <div class="news-content">
-              <span class="news-category">வணிகம்</span>
-              <h3 class="news-title"><a href="#">தமிழகத்தில் தொழில் முதலீடு 15% உயர்வு</a></h3>
-              <p class="news-summary">கடந்த காலாண்டில் தமிழகத்தில் தொழில் துறை முதலீடு 15 சதவீதம் உயர்வைப் பதிவு செய்துள்ளது.</p>
-              <div class="news-meta">
-                <span>டிசம்பர் 22, 2025</span>
-                <span>3 நிமிடம் வாசிப்பு</span>
-              </div>
-            </div>
-          </article>
-          
-          <article class="news-card">
-            <div class="news-image">🏥</div>
-            <div class="news-content">
-              <span class="news-category">சுகாதாரம்</span>
-              <h3 class="news-title"><a href="#">புதிய மருத்துவமனை கட்டமைப்பிற்கான அரசு ஒதுக்கீடு</a></h3>
-              <p class="news-summary">மாநிலத்தில் 5 புதிய மருத்துவமனைகள் கட்டமைப்பதற்காக அரசு ரூ. 200 கோடி ஒதுக்கீடு செய்துள்ளது.</p>
-              <div class="news-meta">
-                <span>டிசம்பர் 21, 2025</span>
-                <span>2 நிமிடம் வாசிப்பு</span>
-              </div>
-            </div>
-          </article>
-          
-          <article class="news-card">
-            <div class="news-image">🌧️</div>
-            <div class="news-content">
-              <span class="news-category">வானிலை</span>
-              <h3 class="news-title"><a href="#">வட தமிழகத்தில் கனமழை எச்சரிக்கை</a></h3>
-              <p class="news-summary">வானிலை ஆய்வு மையம் வட தமிழக மாவட்டங்களுக்கு அடுத்த 48 மணி நேரத்தில் கனமழை எச்சரிக்கை விடுத்துள்ளது.</p>
-              <div class="news-meta">
-                <span>டிசம்பர் 25, 2025</span>
-                <span>1 நிமிடம் வாசிப்பு</span>
-              </div>
-            </div>
-          </article>
+            <!-- News Card 1 -->
+            <article class="news-card">
+                <div class="news-img-container">
+                    <!-- AI Image Placeholder 1: Politics -->
+                    <img src="https://via.placeholder.com/600x400/2c2c2c/FFFFFF?text=AI+Gen+Image+TamilNadu+Govt" alt="தமிழ்நாடு அரசு புதிய திட்டம்" class="news-img">
+                </div>
+                <div class="news-body">
+                    <span class="news-category">அரசியல்</span>
+                    <h2 class="news-title"><a href="#">125 நாள் வேலைத் திட்டம்: மத்திய-மாநில மோதல் கூர்மையாகிறது</a></h2>
+                    <p class="news-summary">புதிய 125 நாள் வேலைத்திட்டத்தை (NREGA) புறக்கணித்து, தமிழகத்தில் மாநில அரசு தனது சொந்த வேலைத்திட்டத்தை தொடங்கியுள்ளது. முதலமைச்சர் ஸ்டாலின் மற்றும் மத்திய அமைச்சர் எடப்பாடி பழனிசாமி இடையே சொற்களிப் பரிமாற்றம்[citation:8].</p>
+                    <div class="news-meta">
+                        <span>டிசம்பர் 25, 2025</span>
+                        <span>2 நி. வாசிப்பு</span>
+                    </div>
+                </div>
+            </article>
+            <!-- News Card 2 -->
+            <article class="news-card">
+                <div class="news-img-container">
+                    <!-- AI Image Placeholder 2: Entertainment -->
+                    <img src="https://via.placeholder.com/600x400/2c2c2c/FFFFFF?text=AI+Gen+Tamil+Stars+Fun" alt="தமிழ் நட்சத்திரங்கள்" class="news-img">
+                </div>
+                <div class="news-body">
+                    <span class="news-category">பொழுதுபோக்கு</span>
+                    <h2 class="news-title"><a href="#">AI-யில் உருவான தமிழ் ஹீரோக்களின் 'டீம் அவுட்டிங்' படங்கள் வைரல்</a></h2>
+                    <p class="news-summary">ரஜினி, கமல் முதல் விஜய், சிவகார்த்திகேயன் வரை அனைத்து தமிழ் நட்சத்திரங்களும் ஒரே பிரேமில், கடை, கடற்கரை போன்ற சாதாரண காட்சிகளில் காணப்படும் AI படங்கள் சமூக ஊடகங்களில் பரவலான வரவேற்பைப் பெற்றுள்ளன[citation:4].</p>
+                    <div class="news-meta">
+                        <span>டிசம்பர் 24, 2025</span>
+                        <span>3 நி. வாசிப்பு</span>
+                    </div>
+                </div>
+            </article>
+            <!-- News Card 3 -->
+            <article class="news-card">
+                <div class="news-img-container">
+                    <!-- AI Image Placeholder 3: Technology -->
+                    <img src="https://via.placeholder.com/600x400/2c2c2c/FFFFFF?text=AI+Gen+Social+Media+App" alt="சமூக ஊடகத் தடை" class="news-img">
+                </div>
+                <div class="news-body">
+                    <span class="news-category">தொழில்நுட்பம்</span>
+                    <h2 class="news-title"><a href="#">16 வயதுக்குட்பட்டோருக்கு சமூக ஊடகத் தடை: ஆஸ்திரேலியா மற்றும் மலேசியாவில் புதிய சட்டம்</a></h2>
+                    <p class="news-summary">இளைஞர்களின் மனநல கவலைகளை முன்னிட்டு, ஆஸ்திரேலியாவில் டிசம்பர் 10 முதலும், மலேசியாவில் 2026 முதலும் 16 வயதுக்குட்பட்டோருக்கு சமூக ஊடகப் பயன்பாட்டைத் தடை செய்ய புதிய சட்டங்கள் அமலுக்கு வந்துள்ளன[citation:9].</p>
+                    <div class="news-meta">
+                        <span>டிசம்பர் 23, 2025</span>
+                        <span>4 நி. வாசிப்பு</span>
+                    </div>
+                </div>
+            </article>
         </div>
-      </section>
 
-      <!-- Middle Page Ad -->
-      <div class="ad-label">விளம்பரம்</div>
-      <div class="ad-container horizontal">
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <!-- Tamil News Middle Page -->
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-client="ca-pub-6592137877448044"
-             data-ad-slot="5566778899"
-             data-ad-format="auto"
-             data-full-width-responsive="true"></ins>
-        <script>
-             (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-      </div>
-
-      <section class="trending-section">
-        <h2 class="section-heading">இன்றைய முன்னணி செய்திகள்</h2>
-        <ol class="trending-list">
-          <li>
-            <div class="trending-number">1</div>
-            <div class="trending-text"><a href="#">மாநிலங்களவைத் தேர்தல்: தமிழகத்திற்கான புதிய உறுப்பினர்கள்</a></div>
-          </li>
-          <li>
-            <div class="trending-number">2</div>
-            <div class="trending-text"><a href="#">பொருளாதார வளர்ச்சி விகிதம்: தமிழ்நாடு முன்னணியில்</a></div>
-          </li>
-          <li>
-            <div class="trending-number">3</div>
-            <div class="trending-text"><a href="#">கிரிக்கெட் உலகக் கோப்பை: இந்திய அணி தயார்நிலை</a></div>
-          </li>
-          <li>
-            <div class="trending-number">4</div>
-            <div class="trending-text"><a href="#">திரைப்பட விழா: சிறந்த தமிழ் திரைப்படங்களுக்கான பரிசுகள்</a></div>
-          </li>
-          <li>
-            <div class="trending-number">5</div>
-            <div class="trending-text"><a href="#">டிஜிட்டல் இந்தியா: தமிழகத்தின் முன்னேற்றம்</a></div>
-          </li>
-        </ol>
-      </section>
-
-      <section id="category-news">
-        <h2 class="section-heading">பிரிவு வாரியான செய்திகள்</h2>
-        <div class="news-grid">
-          <article class="news-card">
-            <div class="news-content">
-              <span class="news-category">தொழில்நுட்பம்</span>
-              <h3 class="news-title"><a href="#">சென்னையில் நடைபெறும் இன்டர்நெட் தொழில்நுட்ப மாநாடு</a></h3>
-              <p class="news-summary">இன்டர்நெட் ஆப் திங்ஸ் மற்றும் AI தொழில்நுட்பங்கள் குறித்த உலகளாவிய மாநாடு சென்னையில் இன்று தொடங்கியது.</p>
-            </div>
-          </article>
-          
-          <article class="news-card">
-            <div class="news-content">
-              <span class="news-category">கல்வி</span>
-              <h3 class="news-title"><a href="#">புதிய கல்விக் கொள்கைக்கான கருத்துக் கணிப்பு</a></h3>
-              <p class="news-summary">மாநில கல்வித்துறை புதிய கல்விக் கொள்கை குறித்த பொதுமக்களின் கருத்துகளை கோரியுள்ளது.</p>
-            </div>
-          </article>
-          
-          <article class="news-card">
-            <div class="news-content">
-              <span class="news-category">போக்குவரத்து</span>
-              <h3 class="news-title"><a href="#">மெட்ரோ இரயில் நீட்டிப்பு பணிகள் முடியும் தருவாயில்</a></h3>
-              <p class="news-summary">சென்னை மெட்ரோ இரயிலின் இரண்டாம் கட்ட நீட்டிப்புப் பணிகள் அடுத்த மாதம் முடியும் என எதிர்பார்க்கப்படுகிறது.</p>
-            </div>
-          </article>
+        <!-- Middle Ad (Rectangle) -->
+        <div class="ad-label">விளம்பரம்</div>
+        <div class="ad-container ad-rectangle" id="ad-middle">
+            <!-- Google AdSense Rectangle Ad will be loaded here -->
         </div>
-      </section>
-      
-      <!-- Bottom Page Ad -->
-      <div class="ad-label">விளம்பரம்</div>
-      <div class="ad-container banner">
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <!-- Tamil News Footer Banner -->
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-client="ca-pub-6592137877448044"
-             data-ad-slot="9988776655"
-             data-ad-format="auto"
-             data-full-width-responsive="true"></ins>
-        <script>
-             (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-      </div>
-    </main>
 
-    <footer>
-      <div class="container">
-        <div class="footer-content">
-          <div class="footer-section">
-            <h3>தமிழ் செய்திகள்</h3>
-            <p>தமிழகத்தின் முன்னணி செய்தி தளம். உண்மையான செய்திகள், நம்பகமான தகவல்கள்.</p>
-          </div>
-          <div class="footer-section">
-            <h3>விரைவு இணைப்புகள்</h3>
-            <ul>
-              <li><a href="#latest-news">சமீபத்திய செய்திகள்</a></li>
-              <li><a href="#politics">அரசியல்</a></li>
-              <li><a href="#sports">விளையாட்டு</a></li>
-              <li><a href="#entertainment">பொழுதுபோக்கு</a></li>
-              <li><a href="#business">வணிகம்</a></li>
-            </ul>
-          </div>
-          <div class="footer-section">
-            <h3>தொடர்பு கொள்ளுங்கள்</h3>
-            <ul>
-              <li>மின்னஞ்சல்: contact@tamilnews.com</li>
-              <li>தொலைபேசி: +91 44 1234 5678</li>
-              <li>முகவரி: சென்னை, தமிழ்நாடு</li>
-            </ul>
-          </div>
+        <!-- Sidebar & Second Row -->
+        <div style="display: grid; grid-template-columns: 1fr 350px; gap: 30px; margin: 40px 0;">
+            <div>
+                <h2 class="page-title">சமீபத்திய செய்திகள்</h2>
+                <div class="news-grid" style="grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));">
+                    <!-- News Card 4 -->
+                    <article class="news-card">
+                        <div class="news-body">
+                            <span class="news-category">உலகம்</span>
+                            <h2 class="news-title"><a href="#">அமெரிக்க தூதரகம் போலி சமூக ஊடக கணக்குகள் குறித்து கடும் எச்சரிக்கை</a></h2>
+                            <p class="news-summary">இலங்கை அமெரிக்க தூதரகம், தூதர் ஜூலி சாங் மற்றும் பிற அதிகாரிகள் பெயரில் இயங்கும் போலி சமூக ஊடக கணக்குகள் விஷயத்தில் பொதுமக்கள் கடும் எச்சரிக்கையாக இருக்க அறிவுறுத்தியுள்ளது[citation:5].</p>
+                            <div class="news-meta">
+                                <span>டிசம்பர் 22, 2025</span>
+                                <span>3 நி. வாசிப்பு</span>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- News Card 5 -->
+                    <article class="news-card">
+                        <div class="news-body">
+                            <span class="news-category">விளையாட்டு</span>
+                            <h2 class="news-title"><a href="#">ஐபிஎல் 2026 ஏலம்: தமிழக வீரர்களின் விலை ஏற்றம்</a></h2>
+                            <p class="news-summary">டிசம்பர் 21-ல் நடைபெற்ற ஐபிஎல் 2026 ஏலத்தில், தமிழகத்தைச் சேர்ந்த இளம் வீரர்கள் சாதனை விலைகளில் வாங்கப்பட்டனர். சென்னை சூப்பர் கிங்ஸ் முக்கிய ஏலங்களை நடத்தியது.</p>
+                            <div class="news-meta">
+                                <span>டிசம்பர் 21, 2025</span>
+                                <span>2 நி. வாசிப்பு</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <!-- Sidebar -->
+            <aside>
+                <div class="sidebar-widget">
+                    <h3 class="widget-title">முன்னணி செய்திகள் 🔥</h3>
+                    <ol class="trending-list">
+                        <li class="trending-item">
+                            <div class="trending-number">1</div>
+                            <div class="trending-text"><a href="#">வங்கதேச தேர்தல் சூழ்ச்சி: முகமது யூனுஸ் மீது குற்றச்சாட்டு[citation:8]</a></div>
+                        </li>
+                        <li class="trending-item">
+                            <div class="trending-number">2</div>
+                            <div class="trending-text"><a href="#">மாநில - மத்திய மோதல்: 125 நாள் வேலைத்திட்டம்[citation:8]</a></div>
+                        </li>
+                        <li class="trending-item">
+                            <div class="trending-number">3</div>
+                            <div class="trending-text"><a href="#">AI-யில் புதிய யுகம்: தமிழ் ஹீரோக்களின் வைரல் படங்கள்[citation:4]</a></div>
+                        </li>
+                        <li class="trending-item">
+                            <div class="trending-number">4</div>
+                            <div class="trending-text"><a href="#">இளைஞர்களுக்கான சமூக ஊடகத் தடை: புதிய சட்டங்கள்[citation:9]</a></div>
+                        </li>
+                        <li class="trending-item">
+                            <div class="trending-number">5</div>
+                            <div class="trending-text"><a href="#">அமெரிக்க தூதரக எச்சரிக்கை: போலி கணக்குகள்[citation:5]</a></div>
+                        </li>
+                    </ol>
+                </div>
+                <!-- Sidebar Ad (Rectangle) -->
+                <div class="ad-label">விளம்பரம்</div>
+                <div class="ad-container ad-rectangle" id="ad-sidebar">
+                    <!-- Google AdSense Sidebar Ad will be loaded here -->
+                </div>
+            </aside>
         </div>
-        <div class="copyright">
-          <p>&copy; 2025 தமிழ் செய்திகள். அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.</p>
-          <p>இந்த வலைத்தளத்தில் உள்ள செய்திகள் மற்றும் கட்டுரைகளை முழுமையாக அல்லது பகுதியாக நகலெடுக்க தடை உண்டு.</p>
+
+        <!-- Bottom Ad (Banner) -->
+        <div class="ad-label">விளம்பரம்</div>
+        <div class="ad-container ad-banner" id="ad-bottom">
+            <!-- Google AdSense Bottom Banner Ad will be loaded here -->
         </div>
-      </div>
+    </div>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-widgets">
+                <div>
+                    <img src="logo.png" alt="Amze Times Logo" class="footer-logo">
+                    <p>Amze Times - தமிழ் மொழியில் வேகமாகவும், நம்பகமானதாகவும் உள்ள முன்னணி செய்தி மூலம். உண்மையைத் தொடும் செய்தி சேவை.</p>
+                </div>
+                <div>
+                    <h4 class="footer-title">விரைவு இணைப்புகள்</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">முகப்பு</a></li>
+                        <li><a href="#about">நம்மைப் பற்றி</a></li>
+                        <li><a href="#contact">தொடர்பு கொள்ள</a></li>
+                        <li><a href="#privacy">தனியுரிமைக் கொள்கை</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">செய்தி வகைகள்</h4>
+                    <ul class="footer-links">
+                        <li><a href="#india">இந்தியா</a></li>
+                        <li><a href="#politics">அரசியல்</a></li>
+                        <li><a href="#sports">விளையாட்டு</a></li>
+                        <li><a href="#entertainment">பொழுதுபோக்கு</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 <strong>Amze Times</strong> (amzetimes.in). அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.</p>
+                <p style="margin-top:5px; font-size:0.8rem;">இந்த வலைத்தளத்தில் உள்ள விளம்பரங்கள் Google AdSense மூலம் நிர்வகிக்கப்படுகின்றன[citation:3].</p>
+            </div>
+        </div>
     </footer>
 
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const searchInput = document.querySelector('.search-box input');
-        const searchButton = document.querySelector('.search-box button');
-        const newsCards = document.querySelectorAll('.news-card');
-        
-        searchButton.addEventListener('click', performSearch);
-        searchInput.addEventListener('keyup', function(event) {
-          if (event.key === 'Enter') {
-            performSearch();
-          }
+        // Mobile Menu Toggle
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            document.getElementById('mainNav').classList.toggle('active');
         });
-        
-        function performSearch() {
-          const searchTerm = searchInput.value.toLowerCase().trim();
-          
-          if (searchTerm === '') {
-            newsCards.forEach(card => {
-              card.style.display = 'block';
-            });
-            return;
-          }
-          
-          newsCards.forEach(card => {
-            const title = card.querySelector('.news-title').textContent.toLowerCase();
-            const summary = card.querySelector('.news-summary').textContent.toLowerCase();
-            const category = card.querySelector('.news-category').textContent.toLowerCase();
-            
-            if (title.includes(searchTerm) || summary.includes(searchTerm) || category.includes(searchTerm)) {
-              card.style.display = 'block';
-            } else {
-              card.style.display = 'none';
-            }
-          });
+
+        // Update Current Date & Time (Tamil)
+        function updateTamilDateTime() {
+            const now = new Date();
+            const optionsDate = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            const optionsTime = { hour: 'numeric', minute: 'numeric', hour12: true };
+            const dateStr = now.toLocaleDateString('ta-IN', optionsDate);
+            const timeStr = now.toLocaleTimeString('ta-IN', optionsTime);
+            document.getElementById('currentDateTime').textContent = `${dateStr} | ${timeStr}`;
         }
-        
-        const today = new Date();
-        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-        const dateString = today.toLocaleDateString('ta-IN', options);
-        document.querySelector('.date-display').textContent = dateString;
-        
-        const navLinks = document.querySelectorAll('nav a');
-        navLinks.forEach(link => {
-          link.addEventListener('click', function(e) {
-            if(this.getAttribute('href').startsWith('#')) {
-              e.preventDefault();
-              navLinks.forEach(item => item.classList.remove('active'));
-              this.classList.add('active');
-              
-              const targetId = this.getAttribute('href');
-              if(targetId !== '#') {
-                const targetElement = document.querySelector(targetId);
-                if(targetElement) {
-                  window.scrollTo({
-                    top: targetElement.offsetTop - 100,
-                    behavior: 'smooth'
-                  });
-                }
-              }
-            }
-          });
+        updateTamilDateTime();
+        setInterval(updateTamilDateTime, 60000); // Update every minute
+
+        // Smooth Navigation
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelectorAll('nav a').forEach(link => link.classList.remove('active'));
+                this.classList.add('active');
+                // Simple scroll - for demo. In real site, would navigate to actual pages.
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
         });
-        
-        // Initialize all AdSense ads
-        (adsbygoogle = window.adsbygoogle || []).push({});
-      });
+
+        // Initialize Google AdSense Ads
+        // In a real setup, you would place specific ad code here.
+        // This is a placeholder to simulate ad loading.
+        setTimeout(() => {
+            ['ad-top', 'ad-middle', 'ad-sidebar', 'ad-bottom'].forEach(id => {
+                const adEl = document.getElementById(id);
+                if(adEl) {
+                    adEl.innerHTML = `<div style="padding: 10px;">Google AdSense Ad: ${id.replace('ad-','').toUpperCase()}</div>`;
+                }
+            });
+        }, 1000);
     </script>
-  </body>
+</body>
 </html>
