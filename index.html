@@ -1,338 +1,753 @@
 <!DOCTYPE html>
-<html lang="ta">
+<html lang="ta" class="light-mode">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amaze Times - உடனுக்குடன் உண்மையான செய்திகள் | தினமலர் செய்திகள் தொகுப்பு</title>
+    
+    <meta name="description" content="Amaze Times - இன்றைய முக்கிய செய்திகள், அரசியல், சினிமா, விளையாட்டு மற்றும் தொழில்நுட்பச் செய்திகளின் தொகுப்பு.">
+    <meta name="keywords" content="Tamil News, Dinamalar News, Chennai News, Vaikunta Ekadasi, Khaleda Zia, India vs Sri Lanka, Tamil Nadu Politics">
+    <meta name="author" content="Amaze Times Digital">
+    <link rel="icon" href="logo.png" type="image/png">
 
-<title>AMZE TIMES | உடனுக்குடன் தமிழ் செய்திகள்</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta+Malar:wght@200;300;400;500;600;700;800&family=Noto+Sans+Tamil:wght@100..900&display=swap" rel="stylesheet">
 
-<meta name="description" content="Amze Times – சமீபத்திய தமிழ் செய்திகள், அரசியல், விளையாட்டு, சினிமா, வணிகம், தொழில்நுட்பம்">
-<meta name="keywords" content="Tamil News, Latest Tamil News, Dinamalar, Dinathanthi">
-<meta name="author" content="Amze Times Digital">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6592137877448044" crossorigin="anonymous"></script>
 
-<link rel="icon" href="logo.png">
+    <style>
+        /* =========================================
+        AMAZE TIMES CORE FRAMEWORK v6.0
+        High Fidelity News Portal Stylesheet
+        =========================================
+        */
 
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+        :root {
+            /* Color System */
+            --brand-red: #d9222a;
+            --brand-dark: #1a1a1a;
+            --brand-blue: #0056b3;
+            --bg-light: #f4f6f9;
+            --bg-white: #ffffff;
+            --text-dark: #212529;
+            --text-muted: #6c757d;
+            --border-light: #e9ecef;
+            
+            /* Spacing & Effects */
+            --container-max: 1280px;
+            --shadow-soft: 0 4px 15px rgba(0,0,0,0.05);
+            --shadow-hard: 0 8px 30px rgba(0,0,0,0.12);
+            --radius-sm: 4px;
+            --radius-md: 10px;
+            --trans-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
 
-<!-- GOOGLE ADSENSE -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6592137877448044" crossorigin="anonymous"></script>
+        /* Dark Mode Definitions */
+        html.dark-mode {
+            --bg-light: #121212;
+            --bg-white: #1e1e1e;
+            --text-dark: #e9ecef;
+            --text-muted: #a0a0a0;
+            --border-light: #333333;
+            --shadow-soft: 0 4px 15px rgba(0,0,0,0.4);
+        }
 
-<style>
-/* =========================================================
-   AMZE TIMES – SINGLE FILE NEWS PORTAL
-   ========================================================= */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Noto Sans Tamil', 'Helvetica Neue', Arial, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.7;
+            overflow-x: hidden;
+            transition: background 0.3s;
+        }
 
-:root{
---red:#d9222a;
---dark:#111;
---bg:#f4f6f9;
---white:#fff;
---border:#e5e7eb;
---muted:#6b7280;
-}
+        a { text-decoration: none; color: inherit; transition: var(--trans-smooth); }
+        ul { list-style: none; }
+        button { border: none; outline: none; background: none; cursor: pointer; font-family: inherit; }
+        img { max-width: 100%; height: auto; display: block; }
 
-*{margin:0;padding:0;box-sizing:border-box}
+        .container { width: 100%; max-width: var(--container-max); margin: 0 auto; padding: 0 20px; }
+        .flex-box { display: flex; align-items: center; }
 
-body{
-font-family:'Noto Sans Tamil',sans-serif;
-background:var(--bg);
-color:#111;
-line-height:1.75;
-}
+        /* =========================================
+           TOP NAVIGATION & UTILITY
+           ========================================= */
+        .top-utility {
+            background: var(--brand-dark);
+            color: #fff;
+            padding: 10px 0;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+        .top-utility .container { display: flex; justify-content: space-between; align-items: center; }
+        .utility-links a { margin-left: 20px; opacity: 0.8; }
+        .utility-links a:hover { opacity: 1; color: var(--brand-red); }
 
-a{text-decoration:none;color:inherit}
-ul{list-style:none}
+        .header-main {
+            background: var(--bg-white);
+            padding: 30px 0;
+            border-bottom: 1px solid var(--border-light);
+        }
+        .header-grid {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            align-items: center;
+        }
+        .branding { text-align: center; }
+        .logo-img { height: 75px; margin: 0 auto 10px; }
+        .site-title {
+            font-family: 'Mukta Malar', sans-serif;
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--brand-red);
+            line-height: 0.8;
+            letter-spacing: -1.5px;
+        }
+        .site-subtitle {
+            font-size: 1rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+            margin-top: 5px;
+        }
 
-.container{
-max-width:1320px;
-margin:auto;
-padding:0 16px;
-}
+        .weather-info { font-weight: 700; color: var(--brand-blue); }
 
-/* TOP BAR */
-.top-bar{
-background:#000;
-color:#fff;
-font-size:14px;
-}
-.top-bar .container{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:8px 0;
-}
+        /* Navigation Menu */
+        .main-nav {
+            background: var(--bg-white);
+            border-bottom: 4px solid var(--brand-red);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        .nav-list { display: flex; justify-content: center; overflow-x: auto; }
+        .nav-item { position: relative; }
+        .nav-link {
+            padding: 18px 22px;
+            display: block;
+            font-weight: 800;
+            color: var(--text-dark);
+            text-transform: uppercase;
+            font-size: 1rem;
+        }
+        .nav-link:hover, .nav-link.active { color: var(--brand-red); background: rgba(0,0,0,0.02); }
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--brand-red);
+        }
 
-/* HEADER */
-header{
-background:#fff;
-border-bottom:4px solid var(--red);
-padding:20px 0;
-text-align:center;
-}
-header img{
-height:64px;
-}
-header h1{
-font-size:2.6rem;
-font-weight:900;
-color:var(--red);
-letter-spacing:-1px;
-}
+        /* Breaking Ticker */
+        .breaking-ticker {
+            background: var(--brand-dark);
+            color: #fff;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+        .ticker-label {
+            background: var(--brand-red);
+            padding: 0 25px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            font-weight: 900;
+            font-size: 0.9rem;
+            z-index: 2;
+            box-shadow: 10px 0 20px rgba(0,0,0,0.2);
+        }
+        .ticker-content { flex: 1; padding-left: 30px; }
+        .ticker-track {
+            display: flex;
+            white-space: nowrap;
+            animation: ticker-slide 50s linear infinite;
+        }
+        .ticker-news { margin-right: 60px; font-size: 0.95rem; display: flex; align-items: center; }
+        .ticker-news::before { content: '●'; color: var(--brand-red); margin-right: 10px; font-size: 0.7rem; }
 
-/* NAV */
-nav{
-background:#fff;
-border-bottom:1px solid var(--border);
-}
-nav ul{
-display:flex;
-gap:20px;
-overflow-x:auto;
-padding:14px 0;
-font-weight:800;
-}
-nav a.active{color:var(--red)}
+        @keyframes ticker-slide {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
 
-/* BREAKING */
-.ticker{
-background:#111;
-color:#fff;
-overflow:hidden;
-white-space:nowrap;
-}
-.ticker span{
-display:inline-block;
-padding:12px 50px;
-animation:ticker 35s linear infinite;
-}
-@keyframes ticker{
-0%{transform:translateX(100%)}
-100%{transform:translateX(-100%)}
-}
+        /* =========================================
+           CONTENT LAYOUT
+           ========================================= */
+        .main-container {
+            display: grid;
+            grid-template-columns: 1fr 340px;
+            gap: 30px;
+            margin-top: 40px;
+        }
 
-/* LAYOUT */
-.main{
-display:grid;
-grid-template-columns:1fr 340px;
-gap:30px;
-margin-top:30px;
-}
+        /* Hero Grid */
+        .hero-section {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        .hero-big {
+            position: relative;
+            height: 500px;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-hard);
+        }
+        .hero-small-stack { display: flex; flex-direction: column; gap: 20px; }
+        .hero-small {
+            position: relative;
+            height: 240px;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+        }
+        .img-overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(to top, rgba(0,0,0,0.9) 10%, rgba(0,0,0,0.3) 50%, transparent 100%);
+            z-index: 1;
+        }
+        .hero-img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s; }
+        .hero-big:hover .hero-img, .hero-small:hover .hero-img { transform: scale(1.08); }
+        
+        .hero-content {
+            position: absolute;
+            bottom: 0;
+            padding: 30px;
+            color: #fff;
+            z-index: 2;
+            pointer-events: none;
+        }
+        .category-tag {
+            background: var(--brand-red);
+            color: #fff;
+            padding: 4px 12px;
+            font-size: 0.75rem;
+            font-weight: 800;
+            border-radius: 3px;
+            margin-bottom: 12px;
+            display: inline-block;
+            text-transform: uppercase;
+        }
+        .hero-title { font-size: 2.2rem; font-weight: 800; line-height: 1.2; text-shadow: 0 2px 4px rgba(0,0,0,0.5); }
+        .hero-small .hero-title { font-size: 1.2rem; }
 
-/* NEWS */
-.section-title{
-font-size:1.5rem;
-font-weight:900;
-color:var(--red);
-margin-bottom:18px;
-}
+        /* Section Layouts */
+        .content-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 25px;
+            border-bottom: 3px solid var(--border-light);
+            padding-bottom: 10px;
+        }
+        .section-heading { font-size: 1.6rem; font-weight: 900; color: var(--brand-red); position: relative; }
+        .section-heading::after {
+            content: '';
+            position: absolute;
+            bottom: -13px;
+            left: 0;
+            width: 80px;
+            height: 3px;
+            background: var(--brand-red);
+        }
 
-.news-grid{
-display:grid;
-grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
-gap:22px;
-}
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+        .news-card {
+            background: var(--bg-white);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            border: 1px solid var(--border-light);
+            box-shadow: var(--shadow-soft);
+            transition: var(--trans-smooth);
+            display: flex;
+            flex-direction: column;
+        }
+        .news-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-hard); }
+        .card-img-box { position: relative; height: 200px; overflow: hidden; }
+        .card-body { padding: 20px; flex-grow: 1; }
+        .card-meta { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 10px; display: flex; justify-content: space-between; }
+        .card-title { font-size: 1.25rem; font-weight: 800; line-height: 1.4; margin-bottom: 12px; color: var(--text-dark); }
+        .card-excerpt { font-size: 0.95rem; color: var(--text-muted); display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
 
-.news-card{
-background:#fff;
-border:1px solid var(--border);
-border-radius:10px;
-padding:20px;
-display:flex;
-flex-direction:column;
-}
+        /* Sidebar Elements */
+        .sidebar-widget {
+            background: var(--bg-white);
+            padding: 25px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-light);
+            margin-bottom: 30px;
+            box-shadow: var(--shadow-soft);
+        }
+        .widget-title { font-size: 1.2rem; font-weight: 800; margin-bottom: 20px; border-left: 5px solid var(--brand-red); padding-left: 12px; }
+        
+        .trending-item { display: flex; gap: 15px; margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid var(--border-light); }
+        .trending-item:last-child { border-bottom: none; margin-bottom: 0; }
+        .trend-num { font-size: 2rem; font-weight: 900; color: #eee; line-height: 1; }
+        .trend-text { font-size: 1rem; font-weight: 700; line-height: 1.3; }
 
-.news-card time{
-font-size:12px;
-color:var(--muted);
-margin-bottom:6px;
-}
+        /* Google Ad Slots */
+        .ad-slot {
+            margin: 30px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .ad-tag { font-size: 10px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 5px; letter-spacing: 1px; }
+        .ad-placeholder { background: #f0f0f0; border: 1px dashed #ccc; width: 100%; min-height: 90px; display: flex; align-items: center; justify-content: center; }
 
-.news-card h3{
-font-size:1.1rem;
-font-weight:800;
-margin-bottom:10px;
-}
+        /* District News Tabs */
+        .district-tabs { display: flex; border-bottom: 2px solid var(--border-light); margin-bottom: 25px; }
+        .tab-trigger { padding: 12px 25px; font-weight: 800; color: var(--text-muted); cursor: pointer; border-bottom: 4px solid transparent; }
+        .tab-trigger.active { color: var(--brand-red); border-bottom-color: var(--brand-red); }
+        .tab-pane { display: none; animation: fadeIn 0.5s; }
+        .tab-pane.active { display: block; }
 
-.news-card p{
-font-size:0.95rem;
-color:#444;
-}
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
-/* ADS */
-.ad{
-margin:30px 0;
-text-align:center;
-}
+        /* =========================================
+           FOOTER
+           ========================================= */
+        .site-footer {
+            background: var(--brand-dark);
+            color: #ccc;
+            padding: 80px 0 30px;
+            margin-top: 60px;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 50px;
+            padding-bottom: 50px;
+            border-bottom: 1px solid #333;
+        }
+        .footer-logo { height: 60px; margin-bottom: 20px; }
+        .footer-title { color: #fff; font-size: 1.3rem; margin-bottom: 25px; font-weight: 800; }
+        .footer-links li { margin-bottom: 12px; }
+        .footer-links a:hover { color: var(--brand-red); padding-left: 8px; }
+        
+        .footer-bottom { padding-top: 30px; text-align: center; font-size: 0.9rem; }
+        .social-icons { display: flex; gap: 15px; margin-top: 20px; }
+        .social-btn { width: 40px; height: 40px; border-radius: 50%; background: #333; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 1.2rem; }
 
-/* SIDEBAR */
-.widget{
-background:#fff;
-border:1px solid var(--border);
-border-radius:10px;
-padding:20px;
-margin-bottom:25px;
-}
-
-.widget h3{
-font-size:1.2rem;
-border-left:5px solid var(--red);
-padding-left:10px;
-margin-bottom:15px;
-}
-
-.trending li{
-margin-bottom:10px;
-font-weight:700;
-}
-
-/* FOOTER */
-footer{
-background:#111;
-color:#bbb;
-margin-top:60px;
-}
-
-footer .container{
-padding:35px 0;
-text-align:center;
-}
-
-footer img{
-height:52px;
-margin-bottom:10px;
-}
-
-@media(max-width:900px){
-.main{grid-template-columns:1fr}
-}
-</style>
+        /* Responsive Adjustments */
+        @media (max-width: 992px) {
+            .main-container, .hero-section { grid-template-columns: 1fr; }
+            .hero-big { height: 400px; }
+            .site-title { font-size: 2.2rem; }
+            .header-grid { grid-template-columns: 1fr; gap: 20px; }
+            .header-left, .header-right { justify-content: center; }
+        }
+    </style>
 </head>
-
 <body>
 
-<!-- TOP BAR -->
-<div class="top-bar">
-<div class="container">
-<div id="clock"></div>
-<div>AMZE TIMES</div>
-</div>
+<div class="top-utility">
+    <div class="container">
+        <div id="liveClock">செவ்வாய்க்கிழமை, டிசம்பர் 30, 2025 | 09:00 AM</div>
+        <div class="utility-links flex-box">
+            <button id="themeToggle" style="color:white; margin-right:20px; font-size:0.8rem; border:1px solid #444; padding:2px 10px; border-radius:20px;">🌙 DARK MODE</button>
+            <a href="#">சந்தா விவரம்</a>
+            <a href="#">மின்-இதழ்</a>
+            <a href="#">உதவி</a>
+        </div>
+    </div>
 </div>
 
-<!-- HEADER -->
-<header>
-<img src="logo.png" alt="Amze Times Logo">
-<h1>AMZE TIMES</h1>
+<header class="header-main">
+    <div class="container header-grid">
+        <div class="header-left">
+            <div class="weather-info">🌤️ சென்னை: 29°C</div>
+        </div>
+        <div class="branding">
+            <img src="logo.png" alt="Amaze Times Logo" class="logo-img">
+            <h1 class="site-title">AMAZE TIMES</h1>
+            <p class="site-subtitle">தினமலர் செய்திகளின் அதிகாரப்பூர்வத் தொகுப்பு</p>
+        </div>
+        <div class="header-right">
+            <div class="ad-placeholder" style="width:300px; height:60px; font-size:10px;">விளம்பரம்</div>
+        </div>
+    </div>
 </header>
 
-<!-- NAV -->
-<nav>
-<div class="container">
-<ul>
-<li><a class="active" href="#">முகப்பு</a></li>
-<li><a href="#">தமிழகம்</a></li>
-<li><a href="#">இந்தியா</a></li>
-<li><a href="#">விளையாட்டு</a></li>
-<li><a href="#">சினிமா</a></li>
-<li><a href="#">வணிகம்</a></li>
-<li><a href="#">தொழில்நுட்பம்</a></li>
-</ul>
-</div>
+<nav class="main-nav">
+    <div class="container">
+        <ul class="nav-list" id="mainMenu">
+            <li class="nav-item"><a href="#" class="nav-link active">முகப்பு</a></li>
+            <li class="nav-item"><a href="#national" class="nav-link">இந்தியா</a></li>
+            <li class="nav-item"><a href="#tn" class="nav-link">தமிழகம்</a></li>
+            <li class="nav-item"><a href="#sabarimala" class="nav-link">ஆன்மீகம்</a></li>
+            <li class="nav-item"><a href="#sports" class="nav-link">விளையாட்டு</a></li>
+            <li class="nav-item"><a href="#cinema" class="nav-link">சினிமா</a></li>
+            <li class="nav-item"><a href="#district" class="nav-link">மாவட்டங்கள்</a></li>
+            <li class="nav-item"><a href="#tech" class="nav-link">தொழில்நுட்பம்</a></li>
+        </ul>
+    </div>
 </nav>
 
-<!-- BREAKING NEWS -->
-<div class="ticker">
-<span id="breaking">முக்கிய செய்திகள் ஏற்றப்படுகிறது...</span>
+<div class="breaking-ticker">
+    <div class="ticker-label">முக்கிய செய்திகள்</div>
+    <div class="ticker-content">
+        <div class="ticker-track">
+            <span class="ticker-news"><strong>உலகம்:</strong> வங்கதேச முன்னாள் பிரதமர் கலிதா ஜியா காலமானார் - அவருக்கு 80 வயது.</span>
+            <span class="ticker-news"><strong>ஆன்மீகம்:</strong> இன்று வைகுண்ட ஏகாதசி; பரமபத வாசல் திறப்பு - ஸ்ரீரங்கம் ரங்கநாதர் கோவிலில் பக்தர்கள் பரவசம்.</span>
+            <span class="ticker-news"><strong>விளையாட்டு:</strong> ஐந்தாவது வெற்றி நோக்கி இந்தியா: இலங்கையுடன் கடைசி மோதல்.</span>
+            <span class="ticker-news"><strong>தமிழகம்:</strong> திமுக தேர்தல் அறிக்கை தான், 'ஹீரோ'; மகளிரணி மாநாட்டில் முதல்வர் ஸ்டாலின் பேச்சு.</span>
+            <span class="ticker-news"><strong>இந்தியா:</strong> அர்ஜுன், ஹம்பிக்கு பிரதமர் வாழ்த்து; உலக 'ரேபிட்' செஸ் தொடரில் வெண்கலம்.</span>
+        </div>
+    </div>
 </div>
 
-<!-- MAIN CONTENT -->
-<div class="container main">
+<div class="container main-container">
+    
+    <main>
+        
+        <section class="hero-section">
+            <a href="#" class="hero-big">
+                <img src="https://images.unsplash.com/photo-1544923246-77307dd654ca?q=80&w=1200&auto=format&fit=crop" class="hero-img" alt="Vaikunta Ekadasi">
+                <div class="img-overlay"></div>
+                <div class="hero-content">
+                    <span class="category-tag">ஆன்மீகம்</span>
+                    <h2 class="hero-title">இன்று வைகுண்ட ஏகாதசி; பரமபத வாசல் திறப்பு - ஸ்ரீரங்கம் ரங்கநாதர் கோவிலில் பக்தர்கள் பரவசம்!</h2>
+                </div>
+            </a>
+            <div class="hero-small-stack">
+                <a href="#" class="hero-small">
+                    <img src="https://images.unsplash.com/photo-1596483571304-24a6d2110281?q=80&w=600&auto=format&fit=crop" class="hero-img" alt="Khaleda Zia">
+                    <div class="img-overlay"></div>
+                    <div class="hero-content">
+                        <span class="category-tag">உலகம்</span>
+                        <h2 class="hero-title">வங்கதேச முன்னாள் பிரதமர் கலிதா ஜியா காலமானார் - அவருக்கு 80 வயது.</h2>
+                    </div>
+                </a>
+                <a href="#" class="hero-small">
+                    <img src="https://images.unsplash.com/photo-1531415074968-036ba1b575da?q=80&w=600&auto=format&fit=crop" class="hero-img" alt="India Cricket">
+                    <div class="img-overlay"></div>
+                    <div class="hero-content">
+                        <span class="category-tag">விளையாட்டு</span>
+                        <h2 class="hero-title">ஐந்தாவது வெற்றி நோக்கி இந்தியா: இலங்கையுடன் கடைசி மோதல்.</h2>
+                    </div>
+                </a>
+            </div>
+        </section>
 
-<main>
+        <div class="ad-slot">
+            <span class="ad-tag">ADVERTISEMENT</span>
+            <div class="ad-placeholder">
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-6592137877448044"
+                     data-ad-slot="1234567890"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+            </div>
+        </div>
 
-<h2 class="section-title">சமீபத்திய செய்திகள்</h2>
+        <div class="content-header">
+            <h2 class="section-heading">சமீபத்திய செய்திகள்</h2>
+            <a href="#" style="font-weight:800; color:var(--text-muted); font-size:0.8rem;">மேலும் &rarr;</a>
+        </div>
 
-<div class="news-grid" id="newsGrid"></div>
+        <div class="news-grid">
+            <article class="news-card">
+                <div class="card-img-box">
+                    <img src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?q=80&w=500&auto=format&fit=crop" class="hero-img" alt="Politics">
+                </div>
+                <div class="card-body">
+                    <div class="card-meta"><span>அரசியல்</span> <span>1 மணி நேரம் முன்</span></div>
+                    <h3 class="card-title">திமுக தேர்தல் அறிக்கை தான், 'ஹீரோ'; மகளிரணி மாநாட்டில் முதல்வர் ஸ்டாலின் பேச்சு.</h3>
+                    <p class="card-excerpt">தேர்தல் அறிக்கையை ஹீரோவாக குறிப்பிட்டார். திமுக மகளிரணி மாநாட்டில் பேச்சு.</p>
+                </div>
+            </article>
 
-<div class="ad">
-<ins class="adsbygoogle"
-style="display:block"
-data-ad-client="ca-pub-6592137877448044"
-data-ad-slot="1234567890"
-data-ad-format="auto"></ins>
+            <article class="news-card">
+                <div class="card-img-box">
+                    <img src="https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?q=80&w=500&auto=format&fit=crop" class="hero-img" alt="Chess">
+                </div>
+                <div class="card-body">
+                    <div class="card-meta"><span>இந்தியா</span> <span>2 மணி நேரம் முன்</span></div>
+                    <h3 class="card-title">அர்ஜுன், ஹம்பிக்கு பிரதமர் வாழ்த்து; உலக 'ரேபிட்' செஸ் தொடரில் வெண்கலம்.</h3>
+                    <p class="card-excerpt">அர்ஜுன் மற்றும் ஹம்பி வெண்கலம் வென்றனர். பிரதமர் வாழ்த்து.</p>
+                </div>
+            </article>
+
+            <article class="news-card">
+                <div class="card-img-box">
+                    <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=500&auto=format&fit=crop" class="hero-img" alt="Cinema">
+                </div>
+                <div class="card-body">
+                    <div class="card-meta"><span>சினிமா</span> <span>4 மணி நேரம் முன்</span></div>
+                    <h3 class="card-title">2026 ஆரம்பமே அமர்க்களம் : முதல் வாரத்தில் 6 படங்கள் ரிலீஸ்.</h3>
+                    <p class="card-excerpt">2026 முதல் வாரத்தில் 6 படங்கள் ரிலீஸ்.</p>
+                </div>
+            </article>
+
+            <article class="news-card">
+                <div class="card-img-box">
+                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=500&auto=format&fit=crop" class="hero-img" alt="Theft">
+                </div>
+                <div class="card-body">
+                    <div class="card-meta"><span>இந்தியா</span> <span>5 மணி நேரம் முன்</span></div>
+                    <h3 class="card-title">ஐந்தே நிமிடத்தில் நகைக்கடையில் ரூ.10 கோடி நகைகள் கொள்ளை.</h3>
+                    <p class="card-excerpt">5 நிமிடத்தில் ரூ.10 கோடி நகைகள் கொள்ளை.</p>
+                </div>
+            </article>
+        </div>
+
+        <div class="content-header" id="district">
+            <h2 class="section-heading">மாவட்ட செய்திகள்</h2>
+        </div>
+        
+        <div class="district-tabs">
+            <div class="tab-trigger active" onclick="switchDistrict(event, 'chennai')">சென்னை</div>
+            <div class="tab-trigger" onclick="switchDistrict(event, 'kovai')">கோவை</div>
+            <div class="tab-trigger" onclick="switchDistrict(event, 'madurai')">மதுரை</div>
+            <div class="tab-trigger" onclick="switchDistrict(event, 'nellai')">நெல்லை</div>
+        </div>
+
+        <div id="chennai" class="tab-pane active">
+            <div class="news-grid" style="grid-template-columns: 1fr 1fr;">
+                <article class="news-card flex-box" style="flex-direction: row; height: 150px;">
+                    <img src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?q=80&w=300&auto=format&fit=crop" style="width:150px; height:100%; object-fit:cover;">
+                    <div class="card-body">
+                        <h4 style="font-size:1rem;">சென்னை பல்கலை மசோதாவை திருப்பி அனுப்பினார் ஜனாதிபதி முர்மு.</h4>
+                    </div>
+                </article>
+                <article class="news-card flex-box" style="flex-direction: row; height: 150px;">
+                    <img src="https://images.unsplash.com/photo-1596464716127-f2a82984de30?q=80&w=300&auto=format&fit=crop" style="width:150px; height:100%; object-fit:cover;">
+                    <div class="card-body">
+                        <h4 style="font-size:1rem;">சென்னையில் நான்காவது நாளாக ஆசிரியர்கள் போராட்டம்; புகைப்படம் எடுத்தவர்களின் மொபைல் போன்கள் பறிப்பு.</h4>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+        <div id="kovai" class="tab-pane">
+            <div class="news-grid" style="grid-template-columns: 1fr 1fr;">
+                <article class="news-card flex-box" style="flex-direction: row; height: 150px;">
+                    <img src="https://images.unsplash.com/photo-1598263597400-349071350f56?q=80&w=300&auto=format&fit=crop" style="width:150px; height:100%; object-fit:cover;">
+                    <div class="card-body">
+                        <h4 style="font-size:1rem;">கோவை விமான நிலைய விரிவாக்கம்: நிலம் கையகப்படுத்தும் பணி நிறைவு.</h4>
+                    </div>
+                </article>
+                <article class="news-card flex-box" style="flex-direction: row; height: 150px;">
+                    <img src="https://images.unsplash.com/photo-1598263597400-349071350f56?q=80&w=300&auto=format&fit=crop" style="width:150px; height:100%; object-fit:cover;">
+                    <div class="card-body">
+                        <h4 style="font-size:1rem;">கோவை மாவட்டத்தில் புதிய தொழில்துறை திட்டங்கள்.</h4>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+        <div id="madurai" class="tab-pane">
+            <div class="news-grid" style="grid-template-columns: 1fr 1fr;">
+                <article class="news-card flex-box" style="flex-direction: row; height: 150px;">
+                    <img src="https://images.unsplash.com/photo-1598263597400-349071350f56?q=80&w=300&auto=format&fit=crop" style="width:150px; height:100%; object-fit:cover;">
+                    <div class="card-body">
+                        <h4 style="font-size:1rem;">மதுரை மீனாட்சி கோவிலில் சிறப்பு பூஜை.</h4>
+                    </div>
+                </article>
+                <article class="news-card flex-box" style="flex-direction: row; height: 150px;">
+                    <img src="https://images.unsplash.com/photo-1598263597400-349071350f56?q=80&w=300&auto=format&fit=crop" style="width:150px; height:100%; object-fit:cover;">
+                    <div class="card-body">
+                        <h4 style="font-size:1rem;">மதுரை போக்குவரத்து மேம்பாடு திட்டம்.</h4>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+        <div id="nellai" class="tab-pane">
+            <div class="news-grid" style="grid-template-columns: 1fr 1fr;">
+                <article class="news-card flex-box" style="flex-direction: row; height: 150px;">
+                    <img src="https://images.unsplash.com/photo-1598263597400-349071350f56?q=80&w=300&auto=format&fit=crop" style="width:150px; height:100%; object-fit:cover;">
+                    <div class="card-body">
+                        <h4 style="font-size:1rem;">நெல்லை கோவிலில் விழா கொண்டாட்டம்.</h4>
+                    </div>
+                </article>
+                <article class="news-card flex-box" style="flex-direction: row; height: 150px;">
+                    <img src="https://images.unsplash.com/photo-1598263597400-349071350f56?q=80&w=300&auto=format&fit=crop" style="width:150px; height:100%; object-fit:cover;">
+                    <div class="card-body">
+                        <h4 style="font-size:1rem;">நெல்லை மாவட்டத்தில் புதிய பாலம் திறப்பு.</h4>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+    </main>
+
+    <aside>
+        
+        <div class="sidebar-widget">
+            <h3 class="widget-title">செய்தித் தேடல்</h3>
+            <div style="display:flex; gap:10px;">
+                <input type="text" placeholder="தேடுக..." style="flex:1; padding:10px; border:1px solid var(--border-light); border-radius:5px;">
+                <button style="background:var(--brand-red); color:#fff; padding:10px 15px; border-radius:5px;">🔍</button>
+            </div>
+        </div>
+
+        <div class="sidebar-widget">
+            <h3 class="widget-title">முன்னணி செய்திகள் 🔥</h3>
+            <div class="trending-list">
+                <div class="trending-item">
+                    <span class="trend-num">01</span>
+                    <div class="trend-text"><a href="#">இன்று வைகுண்ட ஏகாதசி; பரமபத வாசல் திறப்பு.</a></div>
+                </div>
+                <div class="trending-item">
+                    <span class="trend-num">02</span>
+                    <div class="trend-text"><a href="#">வங்கதேச முன்னாள் பிரதமர் கலிதா ஜியா காலமானார்.</a></div>
+                </div>
+                <div class="trending-item">
+                    <span class="trend-num">03</span>
+                    <div class="trend-text"><a href="#">ஐந்தாவது வெற்றி நோக்கி இந்தியா: இலங்கையுடன் கடைசி மோதல்.</a></div>
+                </div>
+                <div class="trending-item">
+                    <span class="trend-num">04</span>
+                    <div class="trend-text"><a href="#">திமுக தேர்தல் அறிக்கை தான், 'ஹீரோ'.</a></div>
+                </div>
+                <div class="trending-item">
+                    <span class="trend-num">05</span>
+                    <div class="trend-text"><a href="#">அர்ஜுன், ஹம்பிக்கு பிரதமர் வாழ்த்து.</a></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sidebar-widget">
+            <h3 class="widget-title">மக்களின் கருத்து</h3>
+            <p style="font-size:0.9rem; margin-bottom:15px; font-weight:700;">இந்தியா இலங்கை தொடரை வெல்லுமா?</p>
+            <form>
+                <div style="margin-bottom:10px;"><input type="radio" name="poll" id="y"> <label for="y">நிச்சயமாக வெல்லும்</label></div>
+                <div style="margin-bottom:10px;"><input type="radio" name="poll" id="n"> <label for="n">வாய்ப்புகள் குறைவு</label></div>
+                <div style="margin-bottom:10px;"><input type="radio" name="poll" id="m"> <label for="m">சொல்ல முடியாது</label></div>
+                <button style="width:100%; background:var(--brand-dark); color:#fff; padding:10px; border-radius:5px; margin-top:10px; font-weight:800;">வாக்களி</button>
+            </form>
+        </div>
+
+        <div class="ad-slot">
+            <span class="ad-tag">ADVERTISEMENT</span>
+            <div class="ad-placeholder" style="height:250px; width:300px;">
+                 <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-6592137877448044"
+                     data-ad-slot="2345678901"></ins>
+            </div>
+        </div>
+
+    </aside>
+
 </div>
 
-</main>
-
-<aside>
-
-<div class="widget">
-<h3>🔥 Trending</h3>
-<ul class="trending" id="trending"></ul>
-</div>
-
-<div class="ad">
-<ins class="adsbygoogle"
-style="display:block"
-data-ad-client="ca-pub-6592137877448044"
-data-ad-slot="3456789012"></ins>
-</div>
-
-</aside>
-
-</div>
-
-<!-- FOOTER -->
-<footer>
-<div class="container">
-<img src="logo.png" alt="logo">
-<p>© 2025 AMZE TIMES – அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை</p>
-<p style="font-size:12px;opacity:.6">
-செய்திகள் திறந்த RSS ஆதாரங்களின் அடிப்படையில் தொகுக்கப்பட்டவை
-</p>
-</div>
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div>
+                <img src="logo.png" alt="Amaze Times Logo" class="footer-logo">
+                <p>Amaze Times - தினமலர் செய்திகளின் தொகுப்புகளை உடனுக்குடன் வழங்கும் இந்தியாவின் முன்னணி தமிழ் செய்தி இணையதளம். உண்மையைத் தொடும் செய்தி சேவை.</p>
+                <div class="social-icons">
+                    <a href="#" class="social-btn">f</a>
+                    <a href="#" class="social-btn">𝕏</a>
+                    <a href="#" class="social-btn">In</a>
+                    <a href="#" class="social-btn">Yt</a>
+                </div>
+            </div>
+            <div>
+                <h4 class="footer-title">முக்கியப் பிரிவுகள்</h4>
+                <ul class="footer-links">
+                    <li><a href="#">இந்தியா செய்திகள்</a></li>
+                    <li><a href="#">தமிழக செய்திகள்</a></li>
+                    <li><a href="#">விளையாட்டு</a></li>
+                    <li><a href="#">சினிமா செய்திகள்</a></li>
+                    <li><a href="#">வணிகம்</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="footer-title">மாவட்டங்கள்</h4>
+                <ul class="footer-links">
+                    <li><a href="#">சென்னை</a></li>
+                    <li><a href="#">கோயம்புத்தூர்</a></li>
+                    <li><a href="#">மதுரை</a></li>
+                    <li><a href="#">திருச்சிராப்பள்ளி</a></li>
+                    <li><a href="#">சேலம்</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="footer-title">உதவி & தொடர்பு</h4>
+                <ul class="footer-links">
+                    <li><a href="#">எங்களை பற்றி</a></li>
+                    <li><a href="#">விளம்பரம் செய்ய</a></li>
+                    <li><a href="#">தனியுரிமைக் கொள்கை</a></li>
+                    <li><a href="#">தொடர்பு கொள்ள</a></li>
+                    <li><a href="#">அடிக்கடி கேட்கப்படும் கேள்விகள்</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 <strong>Amaze Times</strong> (amazetimes.in). அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.</p>
+            <p style="font-size:0.75rem; margin-top:10px; opacity:0.6;">செய்திகள் தினமலர் இணையதளத் தரவுகளின் அடிப்படையில் தொகுக்கப்பட்டுள்ளன.</p>
+        </div>
+    </div>
 </footer>
 
 <script>
-/* LIVE CLOCK */
-setInterval(()=>{
-document.getElementById("clock").innerText =
-new Date().toLocaleString("ta-IN",{dateStyle:"full",timeStyle:"short"});
-},1000);
+    /**
+     * CLOCK LOGIC
+     */
+    function updateClock() {
+        const now = new Date();
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' };
+        document.getElementById('liveClock').textContent = now.toLocaleDateString('ta-IN', options);
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
 
-/* LIVE TAMIL NEWS RSS */
-const RSS =
-"https://news.google.com/rss/search?q=site:dinamalar.com+OR+site:dinathanthi.com+OR+Tamil+News&hl=ta&gl=IN&ceid=IN:ta";
+    /**
+     * DISTRICT TAB SWITCHER
+     */
+    function switchDistrict(evt, cityName) {
+        var i, tabContent, tabLinks;
+        tabContent = document.getElementsByClassName("tab-pane");
+        for (i = 0; i < tabContent.length; i++) {
+            tabContent[i].classList.remove("active");
+        }
+        tabLinks = document.getElementsByClassName("tab-trigger");
+        for (i = 0; i < tabLinks.length; i++) {
+            tabLinks[i].classList.remove("active");
+        }
+        document.getElementById(cityName).classList.add("active");
+        evt.currentTarget.classList.add("active");
+    }
 
-const API =
-"https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent(RSS);
+    /**
+     * THEME TOGGLE
+     */
+    const themeBtn = document.getElementById('themeToggle');
+    themeBtn.addEventListener('click', () => {
+        document.documentElement.classList.toggle('dark-mode');
+        if(document.documentElement.classList.contains('dark-mode')) {
+            themeBtn.textContent = '☀️ LIGHT MODE';
+        } else {
+            themeBtn.textContent = '🌙 DARK MODE';
+        }
+    });
 
-fetch(API)
-.then(r=>r.json())
-.then(data=>{
-let newsHTML="";
-let trendHTML="";
-
-data.items.slice(0,25).forEach((item,i)=>{
-newsHTML+=`
-<article class="news-card">
-<time>${new Date(item.pubDate).toLocaleString("ta-IN")}</time>
-<h3>${item.title}</h3>
-<p>${item.description.replace(/<[^>]*>?/gm,"").slice(0,180)}...</p>
-</article>
-`;
-
-if(i<8){
-trendHTML+=`<li>${item.title}</li>`;
-}
-});
-
-document.getElementById("newsGrid").innerHTML = newsHTML;
-document.getElementById("trending").innerHTML = trendHTML;
-document.getElementById("breaking").innerText = data.items[0].title;
-});
-
-/* ADS INIT */
-(adsbygoogle = window.adsbygoogle || []).push({});
+    /**
+     * AD INITIALIZATION (Simulated)
+     */
+    (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 
 </body>
